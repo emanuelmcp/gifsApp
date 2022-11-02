@@ -4,6 +4,9 @@
     <hr class="text-white" />
 
     <div class="list-group list-reset">
-      <a href="#" class="list-group-item list-group-item-action" *ngFor="let query of history">{{ query |  titlecase}}</a>
+      <a class="list-group-item list-group-item-action"
+         (click)="search(query)"
+         *ngFor="let query of history">{{ query |  titlecase}}
+      </a>
     </div>
   </div>
